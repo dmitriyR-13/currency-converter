@@ -1,0 +1,89 @@
+body {
+    background-color: #eef2f5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+.converter-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+    width: 400px;
+}
+
+h1 { 
+    text-align: center;
+    margin-bottom: 2rem;
+    color: #007bff; 
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    align-items: center;
+}
+
+.left-col, .right-col {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+input, select, #total {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-sizing: border-box;
+}
+
+#total {
+    font-weight: bold;
+    color: #007bff;
+    background: #f8f9fa;
+    text-align: center;
+}
+
+button#swap {
+    background: #007bff;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    margin: 0 auto;
+    cursor: pointer;
+}
+
+@media (max-width: 600px) {
+    .converter-card {
+        width: 85%;
+        padding: 1.5rem;
+    }
+
+    .grid-container {
+        display: flex; 
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    #input-start { order: 1; }
+    #currency { order: 2; }
+    #swap { order: 3; }
+    #currency-total { order: 4; }
+    #total { order: 5; }
+
+    .left-col, .right-col {
+        display: contents;
+    }
+    
+    input, select, #total {
+        max-width: 100%;
+        margin: 0;
+    }
+}

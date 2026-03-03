@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Конвертер</title>
+</head>
+
+<body>
+    <section class="converter-card">
+        <h1>Конвертер валют</h1>
+
+        <div class="grid-container">
+            <div class="left-col">
+                <input type="number" id="input-start" placeholder="Сумма">
+                <div id="total">---</div>
+            </div>
+
+            <div class="right-col">
+                <select id="currency">
+                    <option value="USD">USD</option>
+                    <option value="EUR">EUR</option>
+                    <option value="RUB">RUB</option>
+                    <option value="VND">VND</option>
+                </select>
+                <button id="swap">⇅</button>
+                <select id="currency-total">
+                    <option value="EUR">EUR</option>
+                    <option value="USD">USD</option>
+                    <option value="RUB">RUB</option>
+                    <option value="VND">VND</option>
+                </select>
+            </div>
+        </div>
+    </section>
+    <script src="script/main.js"></script>
+</body>
+
+</html>
